@@ -1,0 +1,16 @@
+/* src/components/PostList.css */
+@media (max-width: 600px) {
+    /* Styles for smaller screens */
+    ul {
+      padding: 0;
+    }
+  
+    li {
+      margin: 5px 0;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      border-radius: 0;
+      padding: 10px;
+    }
+  }
+  
