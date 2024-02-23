@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPostsRequest, fetchPostsSuccess, fetchPostsFailure } from '../actions/redditActions';
+import { setPosts, setLoading, setError } from '../actions/redditActions'; 
 import PostList from '../components/PostList';
 import SearchBar from '../components/SearchBar';
-import { fetchPosts } from '../api/api'; // Import the fetchPosts function
+import { fetchPosts } from '../api/api';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -22,8 +23,21 @@ const App = () => {
   };
 
   useEffect(() => {
-    handleSearch('reactjs'); // Default subreddit to show when the app loads
-  }, []);
+    const fetchData = async () => {
+      try {
+        dispatch(setLoading(true));
+        const posts = await fetchPosts();
+        dispatch(setPosts(posts));
+        dispatch(setLoading(false));
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+        dispatch(setError(true));
+      }
+    };
+  
+    fetchData();
+  }, [dispatch]); 
+  
 
   return (
     <div>

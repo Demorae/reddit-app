@@ -1,4 +1,4 @@
-// src/components/PostList.test.js
+
 import React from 'react';
 import { render } from '@testing-library/react';
 import PostList from './PostList';

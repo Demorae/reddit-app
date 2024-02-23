@@ -1,4 +1,3 @@
-// src/reducers/redditReducer.js
 import {
     FETCH_POSTS_REQUEST,
     FETCH_POSTS_SUCCESS,
