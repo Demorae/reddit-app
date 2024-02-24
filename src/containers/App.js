@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { fetchPostsRequest, fetchPostsSuccess, fetchPostsFailure } from '../actions/redditActions';
 import { setPosts, setLoading, setError } from '../actions/redditActions'; 
 import PostList from '../components/PostList';
@@ -8,8 +8,6 @@ import { fetchPosts } from '../api/api';
 
 const App = () => {
   const dispatch = useDispatch();
-  const posts = useSelector((state) => state.posts);
-  const loading = useSelector((state) => state.loading);
 
   const handleSearch = async (term) => {
     dispatch(fetchPostsRequest());
@@ -37,13 +35,12 @@ const App = () => {
   
     fetchData();
   }, [dispatch]); 
-  
 
   return (
     <div>
       <h1>Reddit App</h1>
       <SearchBar onSearch={handleSearch} />
-      {loading ? <p>Loading...</p> : <PostList posts={posts} />}
+      <PostList />
     </div>
   );
 };

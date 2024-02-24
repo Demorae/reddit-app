@@ -12,5 +12,72 @@
       border-radius: 0;
       padding: 10px;
     }
+
+    .post-list-header {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .post-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .post-list-item {
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    
+    .author-info {
+      display: flex;
+      align-items: center;
+    }
+    
+    .author-image {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    
+    .author-name {
+      font-weight: bold;
+    }
+    
+    .post-details {
+      margin-bottom: 10px;
+    }
+    
+    .post-title {
+      font-weight: bold;
+    }
+    
+    .post-image {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    .like-dislike-container {
+      display: flex;
+      align-items: center;
+    }
+    
+    .like-button,
+    .dislike-button {
+      background-color: transparent;
+      border: 1px solid #333;
+      color: #333;
+      padding: 5px 10px;
+      margin-right: 5px;
+    }
+    
+    .like-button:hover,
+    .dislike-button:hover {
+      background-color: #333;
+      color: #fff;
+    }
+    
   }
   
