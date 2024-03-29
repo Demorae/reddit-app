@@ -1,10 +1,14 @@
-export const FETCH_POSTS_REQUEST = 'FETCH_POSTS_REQUEST';
-export const FETCH_POSTS_SUCCESS = 'FETCH_POSTS_SUCCESS';
-export const FETCH_POSTS_FAILURE = 'FETCH_POSTS_FAILURE';
-export const setPosts = (posts) => ({ type: 'SET_POSTS', payload: posts });
-export const setLoading = (loading) => ({ type: 'SET_LOADING', payload: loading });
-export const setError = (error) => ({ type: 'SET_ERROR', payload: error });
-
+export const FETCH_POSTS_REQUEST = "FETCH_POSTS_REQUEST";
+export const FETCH_POSTS_SUCCESS = "FETCH_POSTS_SUCCESS";
+export const FETCH_POSTS_FAILURE = "FETCH_POSTS_FAILURE";
+export const SEARCH = "SEARCH";
+export const setPosts = (posts) => ({ type: "SET_POSTS", payload: posts });
+export const setLoading = (loading) => ({
+  type: "SET_LOADING",
+  payload: loading,
+});
+export const setError = (error) => ({ type: "SET_ERROR", payload: error });
+export const search = (query) => ({ type: SEARCH, payload: query });
 
 export const fetchPostsRequest = () => ({
   type: FETCH_POSTS_REQUEST,
