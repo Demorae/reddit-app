@@ -5,7 +5,7 @@ import CommentList from './CommentList';
 
 const PostList = () => {
   const posts = useSelector((state) => state.posts);
-
+  console.log(posts);
   return (
     <div>
       <h2 className="post-list-header">Posts</h2>
